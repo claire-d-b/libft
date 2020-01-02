@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 15:27:21 by clde-ber          #+#    #+#             */
-/*   Updated: 2019/12/22 13:00:11 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 11:56:10 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 	{
-		if (n > 0)
-			ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n / 10), fd);
 		ft_putnbr_fd((n % 10), fd);
 	}
 }

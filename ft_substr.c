@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 10:55:03 by clde-ber          #+#    #+#             */
-/*   Updated: 2019/12/28 11:16:46 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 11:56:59 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 
 	j = 0;
 	if (!s)
-		return (0);
+		return (ft_strdup(""));
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len >= ft_strlen(s + start))

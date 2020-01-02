@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 10:25:42 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/01 13:20:54 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 12:27:11 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	size;
 	char			*str;
 
-	if (!s)
-		return (0);
-	if (!f)
-		return (ft_strdup(s));
+	if (!s || !f)
+		return (ft_strdup(""));
 	i = 0;
 	size = ft_strlen(s);
 	if (!(str = malloc(sizeof(char) * (size + 1))))

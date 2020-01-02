@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 13:16:15 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/01 19:26:54 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 12:21:12 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ char			**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s || !(res = malloc(sizeof(char *) * (count_malloc(s, c) + 1))))
+	if (!s)
+		return (ft_calloc(2, sizeof(char *)));
+	if (!(res = malloc(sizeof(char *) * (count_malloc(s, c) + 1))))
 		return (0);
-	if (check_empty(s, res, c))
-		return (res);
 	while (i < ft_strlen(s))
 	{
 		while (j < count_malloc(s, c) && s[i] && s[i] != c)
@@ -93,5 +93,5 @@ char			**ft_split(char const *s, char c)
 		i++;
 	}
 	res[count_malloc(s, c)] = 0;
-	return (res);
+	return (check_empty(s, res, c)) ? res : res;
 }

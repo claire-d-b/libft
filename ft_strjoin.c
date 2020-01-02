@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 13:30:25 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/01 13:17:49 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 11:57:26 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	if (!s1 || !s2)
-		return (0);
+		return (ft_strdup(""));
 	if (!(ptr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (0);
 	while (s1[i])
