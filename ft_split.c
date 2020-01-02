@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 13:16:15 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/02 12:21:12 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/02 14:39:03 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char			**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	if (!s)
-		return (ft_calloc(2, sizeof(char *)));
+		return ((char **)ft_calloc(2, sizeof(char *)));
 	if (!(res = malloc(sizeof(char *) * (count_malloc(s, c) + 1))))
 		return (0);
 	while (i < ft_strlen(s))
