@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 13:16:15 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/03 10:46:33 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/03 17:37:42 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,6 @@ static void		*ft_free(char **res, int j)
 	return (NULL);
 }
 
-static int		check_empty(char const *s, char **res, char c)
-{
-	if (s[0] == '\0' || c == '\0')
-	{
-		res[0] = (c == '\0') ? ft_strdup(s) : NULL;
-		res[1] = NULL;
-		return (1);
-	}
-	return (0);
-}
-
 char			**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -93,5 +82,5 @@ char			**ft_split(char const *s, char c)
 		i++;
 	}
 	res[count_malloc(s, c)] = 0;
-	return (check_empty(s, res, c)) ? res : res;
+	return (res);
 }
