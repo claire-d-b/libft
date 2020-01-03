@@ -6,7 +6,7 @@
 /*   By: clde-ber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/02 13:16:15 by clde-ber          #+#    #+#             */
-/*   Updated: 2020/01/02 14:39:03 by clde-ber         ###   ########.fr       */
+/*   Updated: 2020/01/03 09:48:37 by clde-ber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static int		check_empty(char const *s, char **res, char c)
 {
 	if (s[0] == '\0' || c == '\0')
 	{
-		res[0] = ft_strdup((c == '\0') ? s : "");
+		res[0] = ft_strdup((c == '\0') ? s : NULL);
 		res[1] = NULL;
 		return (1);
 	}
